@@ -1,31 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap");
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Plus Jakarta Sans", Arial, sans-serif;
+  font-weight: 700;
   margin: 0;
   height: 100vh;
   display: flex;
   flex-direction: row;
 }
 
+img {
+  width: 10rem;
+  height: 2.5rem;
+  object-fit: contain;
+  margin-top: 2rem;
+}
+
 .page-layout {
   display: flex;
   flex-direction: row;
-  height: 100vh;
   width: 100%;
+}
+
+.colored-ball {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.color-ball-doing {
+  width: 1rem;
+  height: 0.95rem;
+  border-radius: 50%;
+  background-color: #8471f2;
+}
+
+.colored-ball span {
+  color: #828fa3;
+}
+
+.color-ball-todo {
+  background-color: #49c4e5;
+  border-radius: 50%;
+  height: 0.95rem;
+  width: 0.95rem;
+}
+
+.color-ball-done {
+  background-color: #67e2ae;
+  border-radius: 50%;
+  height: 0.95rem;
+  width: 0.95rem;
 }
 
 .kanban-bar {
   background: #f4f7fd;
-  width: 300px;
-  padding: 20px;
-  height: 100vh;
+  width: 18.75rem;
+  height: auto;
   box-sizing: border-box;
 }
 
 .launch-career {
   background-color: #f4f7fd;
-  padding: 20px;
-  height: 96px;
+  padding: 1.25rem;
+  height: auto;
   width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.launch-career img {
+  object-fit: contain;
+  display: none;
+}
+
+.kanban-bar h4 {
+  padding: 1.25em;
+  color: #828fa3;
 }
 
 main {
@@ -37,15 +88,15 @@ main {
 
 .the-grey-line {
   background-color: #e4ebfa;
-  width: 1px;
+  width: 0.2rem;
 }
 
 .to-do-list {
   display: flex;
   justify-items: center;
   background-color: #e4ebfa;
-  gap: 20px;
-  padding: 20px;
+  gap: 1.25rem;
+  padding: 1.25rem;
   flex: 1;
   width: 100%;
 }
@@ -53,9 +104,11 @@ main {
 .launch-career-section {
   background-color: #635fc7;
   color: white;
-  padding: 10px;
-  border-radius: 4px;
-  margin-top: 20px;
+  padding: 0.5rem;
+  border-top-right-radius: 3.75rem;
+  border-bottom-right-radius: 3.75rem;
+  margin-top: 2.5rem;
+  width: 15.625rem;
 }
 
 .to-do-list ul {
@@ -65,9 +118,70 @@ main {
 
 .to-do-list li {
   background-color: white;
-  padding: 10px;
-  margin: 10px 0;
-  height: 60px;
-  width: 280px;
-  border-radius: 8px;
+  padding: 0.625rem;
+  margin: 0.625rem 0;
+  height: 3.75rem;
+  width: 17.5rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .kanban-bar {
+    display: none;
+  }
+
+  .launch-career img {
+    object-fit: contain;
+    display: inline-flex;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-right: 0.5rem;
+  }
+
+  body {
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+  }
+
+  .page-layout {
+    flex-direction: column;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  main {
+    flex: 1;
+    height: auto;
+  }
+
+  .launch-career {
+    padding: 1rem;
+    align-items: center;
+  }
+
+  .to-do-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .to-do-list ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .to-do-list li {
+    width: 320px;
+    font-size: 1rem;
+    text-align: center;
+    height: 60px;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+  }
 }

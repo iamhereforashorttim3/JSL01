@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JSL01</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
     <div class="page-layout">
       <section class="kanban-bar">
-        <h1>Kanban</h1>
-        <p>All Boards (1)</p>
+        <img src="images/logo-light.jpg" alt="kanban-logo" />
+        <h4>All Boards (1)</h4>
         <section class="all-boards">
           <div class="launch-career-section"><p>Launch Career</p></div>
         </section>
@@ -20,28 +25,40 @@
 
       <main>
         <section class="launch-career">
+          <img src="images/favicon (1).jpg" />
           <h2>Launch Career</h2>
         </section>
 
         <section class="to-do-list">
           <ul class="todo-sec">
-            TODO
-            <li>Launch Epic Career</li>
-            <li>Conquer React</li>
-            <li>Understand Databases</li>
-            <li>Crush Frameworks</li>
+            <div class="colored-ball">
+              <span class="color-ball-todo"></span>
+              <span> TODO(4)</span>
+            </div>
+            <li>Launch Epic Career 🚀</li>
+            <li>Conquer React ⚛️</li>
+            <li>Understand Databases ⚙️</li>
+            <li>Crush Frameworks 🖼️</li>
           </ul>
 
           <ul class="doing-sec">
-            DOING (4)
-            <li>Master Javascript</li>
-            <li>Never Give Up</li>
+            <div class="colored-ball">
+              <span class="color-ball-doing"></span>
+              <span>DOING (4)</span>
+            </div>
+
+            <li>Master JavaScript 💛</li>
+            <li>Never Give Up 🏆</li>
           </ul>
 
           <ul class="done-sec">
-            DONE (2)
-            <li>Explore ES6 Features</li>
-            <li>Have Fun</li>
+            <div class="colored-ball">
+              <span class="color-ball-done"></span>
+              <span>DONE (1)</span>
+            </div>
+
+            <li>Explore ES6 Features 🚀</li>
+            <li>Have fun 🥳</li>
           </ul>
         </section>
       </main>
