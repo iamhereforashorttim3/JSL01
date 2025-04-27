@@ -4,9 +4,7 @@ body {
   font-family: "Plus Jakarta Sans", Arial, sans-serif;
   font-weight: 700;
   margin: 0;
-  height: 100vh;
   display: flex;
-  flex-direction: row;
 }
 
 img {
@@ -18,7 +16,6 @@ img {
 
 .page-layout {
   display: flex;
-  flex-direction: row;
   width: 100%;
 }
 
@@ -109,6 +106,12 @@ main {
   border-bottom-right-radius: 3.75rem;
   margin-top: 2.5rem;
   width: 15.625rem;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.launch-career-section:hover {
+  background-color: #a8a4ff;
 }
 
 .to-do-list ul {
@@ -124,6 +127,12 @@ main {
   width: 17.5rem;
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
   border-radius: 0.5rem;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.to-do-list li:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {
@@ -133,10 +142,11 @@ main {
 
   .launch-career img {
     object-fit: contain;
-    display: inline-flex;
-    height: 1.6rem;
-    width: 1.6rem;
+    display: flex;
+    height: 1.25rem;
+    width: 1.25rem;
     margin-right: 0.5rem;
+    margin-bottom: 1.75rem;
   }
 
   body {
@@ -147,19 +157,14 @@ main {
   }
 
   .page-layout {
-    flex-direction: column;
-    width: 100%;
-    overflow-x: hidden;
-  }
-
-  main {
-    flex: 1;
-    height: auto;
+    height: 100%;
+    overflow-y: hidden;
   }
 
   .launch-career {
     padding: 1rem;
     align-items: center;
+    display: flex;
   }
 
   .to-do-list {
